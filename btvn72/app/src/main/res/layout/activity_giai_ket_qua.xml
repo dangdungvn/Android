@@ -5,6 +5,39 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GiaiKetQua">
+    tools:context=".GiaiKetQua"
+    android:padding="40dp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="delta = "
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/edtDelta"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="    Delta = "
+                android:textSize="14dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giai phuong trinh"
+        android:textSize="20dp"
+        android:id="@+id/btnGiai"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"/>
 </LinearLayout>

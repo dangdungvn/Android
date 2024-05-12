@@ -2,74 +2,129 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:padding="24dp">
+    android:background="#abe8ba"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    tools:context=".MainActivity">
+
+    <!-- dòng 1-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal">
+            android:layout_weight="2">
 
             <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:text="User Name:"
-                android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/user"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:hint="    Nhap tai khoan"
-                android:textSize="14dp"
-                android:background="@drawable/vien"
-                android:padding="10dp"/>
+                android:layout_height="wrap_content"
+                android:text="User name"
+                android:textColor="#00bf5f"
+                android:textSize="30dp"
+                android:textStyle="bold" />
         </LinearLayout>
+
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp">
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:text="Password:"
-                android:textSize="20dp" />
+            android:layout_weight="3"
+            android:gravity="center">
 
             <EditText
-                android:id="@+id/pass"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:hint="    Nhap password"
-                android:textSize="14dp"
-                android:background="@drawable/vien"
-                android:inputType="textPassword"
-                android:padding="10dp"/>
+                android:layout_height="70dp"
+                android:background="@drawable/bogoc"
+                android:backgroundTint="#e5f9ef"
+                android:hint="Nhập tài khoản"
+                android:textColor="#00bf5f"
+                android:textSize="20dp"
+                android:id="@+id/user"/>
         </LinearLayout>
-        <CheckBox
-            android:id="@+id/remember"
-            android:layout_marginTop="40dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Remember password"
-            android:textSize="16dp"
-            android:layout_gravity="center"/>
-        <Button
-            android:id="@+id/login"
-            android:layout_marginTop="40dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Login"/>
     </LinearLayout>
+
+    <!--Dòng 2-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textColor="#00bf5f"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/bogoc"
+                android:backgroundTint="#defcec"
+                android:hint="Nhập mật khẩu"
+                android:textColor="#00bf5f"
+                android:textSize="20dp"
+                android:id="@+id/pass"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Dòng 3-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remember Password"
+            android:textColor="#007f3f"
+            android:textSize="20dp"
+            android:id="@+id/remember"/>
+    </LinearLayout>
+
+    <!-- Dòng 4-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00bf5f"
+            android:text="LOG IN"
+            android:id="@+id/login"/>
+    </LinearLayout>
+
 
 </LinearLayout>

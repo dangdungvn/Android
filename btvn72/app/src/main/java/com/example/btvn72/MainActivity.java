@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -24,6 +25,27 @@ public class MainActivity extends AppCompatActivity {
         anhXa();
         tinhPhuongTrinhBac2();
         xoaDuLieu();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 1 && resultCode == 2){
+            double delta = data.getDoubleExtra("delta", 0);
+            int a = Integer.parseInt(edtA.getText().toString());
+            int b = Integer.parseInt(edtB.getText().toString());
+            int c = Integer.parseInt(edtC.getText().toString());
+            if(delta < 0){
+                Toast.makeText(MainActivity.this, "Phuong trinh vo nghiem", Toast.LENGTH_SHORT).show();
+            }
+            else if (delta == 0){
+                Toast.makeText(MainActivity.this, "Phuong trinh co nghiem kep x = " + (-b/(2*a)), Toast.LENGTH_SHORT).show();
+            }
+            else {
+                Toast.makeText(MainActivity.this, "Phuong trinh co 2 nghiem phan biet", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "x1 = " + ((-b + Math.sqrt(delta))/(2*a)) + "    x2 = " + ((-b - Math.sqrt(delta))/(2*a)), Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 
     private void xoaDuLieu() {
@@ -44,16 +66,15 @@ public class MainActivity extends AppCompatActivity {
                 if(edtA.getText().toString().equals("") || edtB.getText().toString().equals("") || edtC.getText().toString().equals("")){
                     Toast.makeText(MainActivity.this, "Dữ liệu không hợp lệ", Toast.LENGTH_SHORT).show();
                 }else {
-                    double a = Integer.parseInt(edtA.getText().toString());
-                    double b = Integer.parseInt(edtB.getText().toString());
-                    double c = Integer.parseInt(edtC.getText().toString());
-                    double delta =(double) b * b - 4 * a * c;
+                    int a = Integer.parseInt(edtA.getText().toString());
+                    int b = Integer.parseInt(edtB.getText().toString());
+                    int c = Integer.parseInt(edtC.getText().toString());
                     Intent intent = new Intent(MainActivity.this, GiaiKetQua.class);
                     intent.putExtra("a", a);
                     intent.putExtra("b", b);
                     intent.putExtra("c", c);
-                    intent.putExtra("delta", delta);
-                    startActivity(intent);
+                    startActivityForResult(intent, 1);
+//                    startActivity(intent);
                 }
             }
         });
