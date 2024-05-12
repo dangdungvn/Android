@@ -8,8 +8,10 @@
         android:right="15dp"
         />
 
-    <solid
-        android:color="#EE82EE"
+    <gradient
+        android:centerColor="#c4fce8"
+        android:startColor="#fc88d1"
+        android:endColor="#abdafc"
         />
 
     <corners
