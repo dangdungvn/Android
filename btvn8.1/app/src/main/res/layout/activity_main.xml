@@ -31,7 +31,6 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="Họ tên:"
-                android:stroke="10dp"  android:strokeColor="#FF0000"
                 android:textStyle="bold"
                 android:textSize="17dp"/>
 
@@ -67,6 +66,7 @@
                 android:layout_weight="1"
                 android:gravity="center">
                 <EditText
+                    android:id="@+id/edtHoTen"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Nhập họ tên"
@@ -89,11 +89,13 @@
                     >
 
                     <RadioButton
+                        android:id="@+id/rdNam"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Nam" />
 
                     <RadioButton
+                        android:id="@+id/rdNu"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Nữ"/>
@@ -109,6 +111,7 @@
                 android:gravity="center">
 
                 <EditText
+                    android:id="@+id/edtQueQuan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Nhập quê quán"
@@ -135,6 +138,7 @@
             android:gravity="center">
 
             <Button
+                android:id="@+id/btnThemMoi"
                 android:layout_width="120dp"
                 android:layout_height="60dp"
                 android:text="THÊM MỚI"
@@ -149,6 +153,7 @@
             android:gravity="center">
 
             <Button
+                android:id="@+id/btnInDS"
                 android:layout_width="120dp"
                 android:layout_height="60dp"
                 android:text="IN DS"
