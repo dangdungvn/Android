@@ -9,7 +9,7 @@
     android:padding="40dp"
     android:orientation="vertical">
 
-
+<!--dòng này làm linear layout-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
