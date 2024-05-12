@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity{
                     usersss.put(user.getText().toString(), pass.getText().toString());
                     Toast.makeText(MainActivity.this, "Tài khoản đã được lưu", Toast.LENGTH_SHORT).show();
                 }else {
-                    Toast.makeText(MainActivity.this, "Sai tài khoản hoặc mật khẩu", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Tài khoản chưa được lưu", Toast.LENGTH_SHORT).show();
                 }
             }
         });
