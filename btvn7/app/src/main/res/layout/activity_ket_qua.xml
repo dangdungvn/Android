@@ -6,38 +6,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".KetQua"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp"
     android:orientation="vertical"
-    android:padding="40dp">
+    android:background="#cccccc">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="80dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:text="Ket Qua = "
-                android:textSize="24dp" />
-
-            <EditText
-                android:id="@+id/edtKq"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:hint="    Ket Qua: "
-                android:textSize="20dp" />
-        </LinearLayout>
+            android:layout_weight="1"
+            android:text="Kết quả:"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            />
+        <EditText
+            android:id="@+id/edtKq"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/customer1"/>
 
     </LinearLayout>
     <Button
-        android:layout_marginTop="40dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
         android:id="@+id/btnBack"
-        android:textSize="20dp"
-        android:layout_gravity="center"/>
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:text="BACK"
+        android:backgroundTint="@color/black"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"/>
 
 </LinearLayout>
