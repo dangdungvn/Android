@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Btvn81"
         tools:targetApi="31">
         <activity
+            android:name=".XuatDuLieu"
+            android:exported="false" />
+        <activity
             android:name=".Customer1"
             android:exported="false" />
         <activity
