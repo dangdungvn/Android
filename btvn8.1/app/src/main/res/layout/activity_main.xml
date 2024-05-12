@@ -7,7 +7,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:paddingRight="15dp"
-    android:paddingLeft="15dp">
+    android:paddingLeft="20dp"
+    android:orientation="vertical"
+    android:background="@drawable/img">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,9 +18,10 @@
         android:orientation="horizontal"
         android:layout_marginTop="50dp"
         >
+        <!--    cột 1-->
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="400dp"
+            android:layout_height="300dp"
             android:orientation="vertical"
             android:layout_weight="1"
             >
@@ -26,64 +30,132 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Họ tên:" />
+                android:text="Họ tên:"
+                android:stroke="10dp"  android:strokeColor="#FF0000"
+                android:textStyle="bold"
+                android:textSize="17dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Giới tính:"/>
+                android:text="Giới tính:"
+                android:textStyle="bold"
+                android:textSize="17dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Quê quán:"/>
+                android:text="Quê quán:"
+                android:textStyle="bold"
+                android:textSize="17dp"/>
+        </LinearLayout>
+
+        <!--    cột 2-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:layout_weight="5"
+            android:orientation="vertical">
+<!--nhapHoTen-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nhập họ tên"
+
+                    android:background="@drawable/customer1"/>
+            </LinearLayout>
+
+<!--namNu-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nam" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nữ"/>
+
+                </RadioGroup>
+            </LinearLayout>
+
+<!--NhapQUeQuan-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nhập quê quán"
+                    android:background="@drawable/customer1"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+<!--    dòng 3-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="60dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:text="THÊM MỚI"
+                android:textStyle="bold"
+                />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="400dp"
-            android:layout_weight="5"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Nhập họ tên"
-                android:layout_weight="1"
-                android:background="@drawable/customer1"/>
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                >
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nam" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nữ"/>
-
-            </RadioGroup>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Nhập quê quán"
-                android:layout_weight="1"
-                android:background="@drawable/customer1"/>
-
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:text="IN DS"
+                android:textStyle="bold"/>
         </LinearLayout>
+
+
 
     </LinearLayout>
 
