@@ -31,7 +31,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="Họ tên:"
-                android:stroke="10dp"  android:strokeColor="#FF0000"
+                android:textColor="#e064b3"
                 android:textStyle="bold"
                 android:textSize="17dp"/>
 
@@ -41,6 +41,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="Giới tính:"
+                android:textColor="#e064b3"
                 android:textStyle="bold"
                 android:textSize="17dp"/>
 
@@ -50,6 +51,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="Quê quán:"
+                android:textColor="#e064b3"
                 android:textStyle="bold"
                 android:textSize="17dp"/>
         </LinearLayout>
@@ -70,7 +72,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Nhập họ tên"
-
                     android:background="@drawable/customer1"/>
             </LinearLayout>
 
@@ -91,12 +92,16 @@
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Nam" />
+                        android:text="Nam"
+                        android:textColor="#7ac4f9"
+                        android:textStyle="bold"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Nữ"/>
+                        android:text="Nữ"
+                        android:textColor="#e064b3"
+                        android:textStyle="bold"/>
 
                 </RadioGroup>
             </LinearLayout>
@@ -139,6 +144,7 @@
                 android:layout_height="60dp"
                 android:text="THÊM MỚI"
                 android:textStyle="bold"
+                android:backgroundTint="#A3D8FF"
                 />
         </LinearLayout>
 
@@ -152,7 +158,8 @@
                 android:layout_width="120dp"
                 android:layout_height="60dp"
                 android:text="IN DS"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:backgroundTint="#A3D8FF"/>
         </LinearLayout>
 
 
