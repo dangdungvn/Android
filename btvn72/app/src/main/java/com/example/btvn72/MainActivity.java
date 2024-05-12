@@ -21,6 +21,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
         anhXa();
         tinhPhuongTrinhBac2();
         xoaDuLieu();
@@ -44,16 +49,14 @@ public class MainActivity extends AppCompatActivity {
                 if(edtA.getText().toString().equals("") || edtB.getText().toString().equals("") || edtC.getText().toString().equals("")){
                     Toast.makeText(MainActivity.this, "Dữ liệu không hợp lệ", Toast.LENGTH_SHORT).show();
                 }else {
-                    double a = Integer.parseInt(edtA.getText().toString());
-                    double b = Integer.parseInt(edtB.getText().toString());
-                    double c = Integer.parseInt(edtC.getText().toString());
-                    double delta =(double) b * b - 4 * a * c;
+                    int a = Integer.parseInt(edtA.getText().toString());
+                    int b = Integer.parseInt(edtB.getText().toString());
+                    int c = Integer.parseInt(edtC.getText().toString());
                     Intent intent = new Intent(MainActivity.this, GiaiKetQua.class);
                     intent.putExtra("a", a);
                     intent.putExtra("b", b);
                     intent.putExtra("c", c);
-                    intent.putExtra("delta", delta);
-                    startActivity(intent);
+                    startActivityForResult(intent, 1);
                 }
             }
         });
