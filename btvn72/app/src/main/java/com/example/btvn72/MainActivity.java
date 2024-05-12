@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -21,14 +22,30 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
         anhXa();
         tinhPhuongTrinhBac2();
         xoaDuLieu();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 1 && resultCode == 2){
+            double delta = data.getDoubleExtra("delta", 0);
+            int a = Integer.parseInt(edtA.getText().toString());
+            int b = Integer.parseInt(edtB.getText().toString());
+            int c = Integer.parseInt(edtC.getText().toString());
+            if(delta < 0){
+                Toast.makeText(MainActivity.this, "Phuong trinh vo nghiem", Toast.LENGTH_SHORT).show();
+            }
+            else if (delta == 0){
+                Toast.makeText(MainActivity.this, "Phuong trinh co nghiem kep x = " + (-b/(2*a)), Toast.LENGTH_SHORT).show();
+            }
+            else {
+                Toast.makeText(MainActivity.this, "Phuong trinh co 2 nghiem phan biet", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "x1 = " + ((-b + Math.sqrt(delta))/(2*a)) + "    x2 = " + ((-b - Math.sqrt(delta))/(2*a)), Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 
     private void xoaDuLieu() {
@@ -57,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("b", b);
                     intent.putExtra("c", c);
                     startActivityForResult(intent, 1);
+//                    startActivity(intent);
                 }
             }
         });
