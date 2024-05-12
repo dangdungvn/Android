@@ -6,87 +6,114 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:padding="40dp"
-    android:orientation="vertical">
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp"
+    android:orientation="vertical"
+    android:background="#cccccc">
 
-<!--dòng này làm linear layout a-->
+    <!--    dòng 1.1-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <TextView
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Giải phương trình bậc 1"
-            android:textSize="24dp"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:orientation="horizontal"
-            android:layout_marginTop="40dp">
+            android:layout_marginTop="80dp"
+            android:gravity="center">
 
             <TextView
-                android:layout_width="60dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="a = "
-                android:textSize="20dp" />
-
+                android:layout_weight="1"
+                android:text="Nhập a:"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                />
             <EditText
                 android:id="@+id/edtA"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:hint="    Nhap a = "
-                android:textSize="14dp" />
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/customer1"/>
+
         </LinearLayout>
+
+        <!--    dòng 2-->
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp">
-            <TextView
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:text="b = "
-                android:textSize="20dp" />
+            android:layout_marginTop="40dp"
+            android:gravity="center">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Nhập b:"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                />
             <EditText
                 android:id="@+id/edtB"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:hint="    Nhap b = "
-                android:textSize="14dp" />
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/customer1"/>
+
         </LinearLayout>
+
     </LinearLayout>
+
+
+
+    <!--    Dòng 3-->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center">
+            android:gravity="center"
+            android:layout_weight="1">
+
             <Button
                 android:id="@+id/btnTinh"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tinh"/>
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:text="GIẢI"
+                android:backgroundTint="@color/black"
+                android:textStyle="bold"/>
         </LinearLayout>
+
+
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center">
+
             <Button
                 android:id="@+id/btnXoa"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Xoa"/>
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:text="XÓA"
+                android:backgroundTint="@color/black"
+                android:textStyle="bold"/>
         </LinearLayout>
+
     </LinearLayout>
+
 
 </LinearLayout>
