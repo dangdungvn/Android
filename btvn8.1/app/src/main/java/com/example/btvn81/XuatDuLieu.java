@@ -2,6 +2,8 @@ package com.example.btvn81;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Adapter;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
@@ -14,8 +16,8 @@ import java.util.List;
 
 public class XuatDuLieu extends AppCompatActivity {
     ListView lvDuLieu;
-    DuLieuAdapter adapter;
     Intent intent;
+    ArrayAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,8 +25,8 @@ public class XuatDuLieu extends AppCompatActivity {
         setContentView(R.layout.activity_xuat_du_lieu);
         lvDuLieu = findViewById(R.id.lvDuLieu);
         intent = getIntent();
-        Bundle bundle = intent.getExtras();
-        List<DuLieu> list = (List<DuLieu>) bundle.getSerializable("list");
-
+        List<String> list = intent.getStringArrayListExtra("list");
+        adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, list);
+        lvDuLieu.setAdapter(adapter);
     }
 }
