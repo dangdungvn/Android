@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:text="ANDROID"
+        android:gravity="center_horizontal"
+        android:textSize="30dp"
+        android:background="#bfbf00"
+        android:textColor="#ff0000"
+        >
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="PHP"
+        android:gravity="center_horizontal"
+        android:textSize="30dp"
+        android:background="#9eba82"
+        android:textColor="@color/black"
+        >
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:text="PHP"
+        android:gravity="center_horizontal"
+        android:textSize="30dp"
+        android:background="#d4aaff"
+        android:textColor="#ff00ff"
+        >
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="JAVA"
+        android:gravity="center_horizontal"
+        android:textSize="30dp"
+        android:background="#ffaaff"
+        android:textColor="#5656ff"
+        >
+    </TextView>
+
+</LinearLayout>
