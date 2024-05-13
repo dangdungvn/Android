@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:padding="20dp">
+    android:padding="20dp"
+    android:background="@drawable/br2">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -25,7 +26,7 @@
         android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="2"
             android:hint="Môn học">
 
@@ -33,29 +34,32 @@
                 android:id="@+id/edtMonHoc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/edit_text"/>
+                android:background="@drawable/customer1"
+                />
         </com.google.android.material.textfield.TextInputLayout>
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:gravity="center">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+
+            <android.widget.Button
                 android:id="@+id/btnAdd"
-                android:text="Add"
-                android:background="@drawable/edit_text"
-                android:layout_gravity="center"
-                style="@style/Widget.MaterialComponents.Button"/>
-            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Edit"
-                android:id="@+id/btnEdit"
-                android:background="@drawable/edit_text"
                 android:layout_gravity="center"
-                style="@style/Widget.MaterialComponents.Button"/>
+                android:background="@drawable/customer2"
+                android:text="Add"
+                android:textColor="#494343" />
+
+            <android.widget.Button
+                android:id="@+id/btnEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/customer2"
+                android:text="Edit"
+                android:textColor="#494343" />
         </LinearLayout>
 
     </LinearLayout>
@@ -63,5 +67,5 @@
         android:id="@+id/lvMonHoc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="30dp" />
 </LinearLayout>
