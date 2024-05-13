@@ -1,9 +1,12 @@
 package com.example.btvn81;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
@@ -13,6 +16,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     RadioButton rdNam, rdNu;
     EditText edtHoTen, edtQueQuan;
     List<DuLieu> list = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +46,16 @@ public class MainActivity extends AppCompatActivity {
                 }
                 list.add(new DuLieu(hoTen, queQuan, gioiTinh));
                 Toast.makeText(MainActivity.this, "Them thanh cong", Toast.LENGTH_SHORT).show();
+            }
+        });
+        btnInDS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, XuatDuLieu.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("list", (Serializable) list);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         });
     }

@@ -53,12 +53,14 @@ public class MainActivity extends AppCompatActivity {
         lvMonHoc.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                int index = position;
+
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setTitle("Xác nhận xóa môn học");
+                builder.setIcon(android.R.drawable.ic_dialog_alert);
                 builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        listMonHoc.remove(index);
+                        listMonHoc.remove(position);
                         adapter.notifyDataSetChanged();
                     }
                 });

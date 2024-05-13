@@ -40,4 +40,12 @@ public class DuLieu {
         this.gioiTinh = gioiTinh;
     }
 
+    @Override
+    public String toString() {
+        return "DuLieu{" +
+                "hoTen='" + hoTen + '\'' +
+                ", queQuan='" + queQuan + '\'' +
+                ", gioiTinh='" + gioiTinh + '\'' +
+                '}';
+    }
 }
