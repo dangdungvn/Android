@@ -1,4 +1,4 @@
-package com.example.btvn81;
+package com.example.btvn82;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,13 +7,12 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class DuLieuAdapter extends BaseAdapter {
     Context context;
     int layout;
-    List<DuLieu> list = new ArrayList<>();
+    List<DuLieu> list;
 
     public DuLieuAdapter(Context context, int layout, List<DuLieu> list) {
         this.context = context;
@@ -38,8 +37,8 @@ public class DuLieuAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        convertView = inflater.inflate(layout, null);
+        LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        convertView = layoutInflater.inflate(layout,null);
         TextView txtHoTen = convertView.findViewById(R.id.txtHoTen);
         TextView txtGioiTinh = convertView.findViewById(R.id.txtGioiTinh);
         TextView txtQueQuan = convertView.findViewById(R.id.txtQueQuan);

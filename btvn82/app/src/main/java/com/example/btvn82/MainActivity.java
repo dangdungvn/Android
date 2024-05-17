@@ -1,12 +1,10 @@
-package com.example.btvn81;
+package com.example.btvn82;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
@@ -24,14 +22,30 @@ public class MainActivity extends AppCompatActivity {
     Button btnThemMoi, btnInDS;
     RadioButton rdNam, rdNu;
     EditText edtHoTen, edtQueQuan;
-    List<String> list = new ArrayList<>();
-
+    List<DuLieu> list = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         anhXa();
+        addDanhSach();
+        inDanhSach();
+
+    }
+
+    private void inDanhSach() {
+        btnInDS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, XuatDuLieu.class);
+                intent.putExtra("list", (Serializable) list);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void addDanhSach() {
         btnThemMoi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,16 +57,8 @@ public class MainActivity extends AppCompatActivity {
                 }else if(rdNu.isChecked()){
                     gioiTinh = "Nu";
                 }
-                list.add(hoTen + "       " + gioiTinh + "       " + queQuan);
-                Toast.makeText(MainActivity.this, "Them thanh cong", Toast.LENGTH_SHORT).show();
-            }
-        });
-        btnInDS.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, XuatDuLieu.class);
-                intent.putStringArrayListExtra("list", (ArrayList<String>) list);
-                startActivity(intent);
+                list.add(new DuLieu(hoTen,gioiTinh,queQuan));
+                Toast.makeText(MainActivity.this, "Đã thêm dữ liệu", Toast.LENGTH_SHORT).show();
             }
         });
     }
