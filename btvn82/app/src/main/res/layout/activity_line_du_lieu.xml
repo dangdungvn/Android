@@ -1,36 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <LinearLayout
+
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/bgr1"-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="#6500BCD4">-->
+<!--        </RelativeLayout>-->
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/bg2"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_toRightOf="@+id/bgr1"-->
+<!--            android:background="@drawable/customer2"-->
+<!--            android:layout_alignLeft="@id/bgr1"-->
+<!--            android:layout_marginStart="100dp"-->
+<!--            >-->
+<!--        </RelativeLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/rlt_bgritem1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/txtHoTen"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:gravity="center"
-            android:text="Họ tên"
-            android:textSize="20dp"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        >
 
-        <TextView
-            android:id="@+id/txtGioiTinh"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="Giới tính"
-            android:textSize="20dp"/>
+        <RelativeLayout
+            android:id="@+id/bgritem1"
+            android:layout_width="300dp"
+            android:layout_height="90dp"
+            android:layout_centerHorizontal="true"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/customer3"
+                android:alpha="0.3"
+                app:tint="#775E5D5D" />
+            <ImageView
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/customer3"
+                 />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_centerVertical="true">
 
-        <TextView
-            android:id="@+id/txtQueQuan"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:gravity="center"
-            android:text="Quê quán"
-            android:textSize="20dp"/>
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/txtHoTen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Họ tên"
+                    android:textSize="20dp"
+                    android:textColor="#e064b3"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/txtGioiTinh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Giới tính"
+                    android:layout_below="@id/txtHoTen"
+                    />
+                <TextView
+                    android:id="@+id/txtQueQuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Năm sinh"
+                    android:layout_below="@id/txtGioiTinh"/>
+            </RelativeLayout>
 
-</LinearLayout>
+
+
+        </RelativeLayout>
+<!--        ảnh avata-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            >
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/imgAnh"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/customer3"
+                android:src="@drawable/img3"
+                app:round="40dp"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
