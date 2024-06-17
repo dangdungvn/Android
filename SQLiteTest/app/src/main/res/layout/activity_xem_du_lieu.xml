@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".XemDuLieu"
+    android:orientation="vertical"
+    android:background="@drawable/picture">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="20dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:src="@drawable/customer_1"
+            android:alpha="0.3"
+            app:tint="#77000000"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:src="@drawable/edittext"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DANH SÁCH SINH VIÊN"
+            android:textSize="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:fontFamily="@font/font_view_bold" />
+    </RelativeLayout>
+    <ListView
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:id="@+id/lvXem"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        app:backgroundTint="@drawable/picture"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:id="@+id/btnBack"
+        android:layout_gravity="center"
+        android:background="@drawable/customer_1"/>
+</LinearLayout>
